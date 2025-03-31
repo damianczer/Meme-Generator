@@ -1,12 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import logo from "../assets/logo.png";
 
 const Header = ({ onMenuToggle }) => {
     return (
         <header className="header">
             <div className="logo">
-                <p className="logo-text">Meme Generator</p>
+                <img src={logo} alt="Logo" className="logo-image" />
             </div>
             <button
                 className="menu-toggle"

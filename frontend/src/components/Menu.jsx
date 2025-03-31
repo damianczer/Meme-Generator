@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import '../styles/_menu.scss';
 import userProfile from "../assets/user-profile.png";
+import Cookies from "js-cookie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faImage, faInfoCircle, faScrewdriverWrench, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faImage, faInfoCircle, faScrewdriverWrench, faTimes, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 const Menu = ({ isOpen, onClose, onSelect }) => {
+    const cookieName = 'dc_meme_generator_settings';
+    const [isDarkMode, setIsDarkMode] = useState(() => Cookies.get(cookieName) === 'dark');
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+        Cookies.set(cookieName, isDarkMode ? 'dark' : 'light', { expires: 365 });
+    }, [isDarkMode]);
+
     const handleSelect = (option) => {
         onSelect(option);
         onClose();
+    };
+
+    const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode);
     };
 
     return (
@@ -33,6 +46,14 @@ const Menu = ({ isOpen, onClose, onSelect }) => {
                     <FontAwesomeIcon icon={faInfoCircle} className="menu-icon" />
                 </li>
             </ul>
+            <div className="dark-mode-toggle">
+                <FontAwesomeIcon icon={faSun} className="toggle-icon" />
+                <label className="switch">
+                    <input type="checkbox" checked={isDarkMode} onChange={toggleDarkMode} />
+                    <span className="slider"></span>
+                </label>
+                <FontAwesomeIcon icon={faMoon} className="toggle-icon" />
+            </div>
         </nav>
     );
 };
