@@ -32,10 +32,6 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource',
       }
     ]
   },
@@ -81,4 +77,4 @@ module.exports = {
     compress: true,
     port: 3000
   }
-};
+}; 

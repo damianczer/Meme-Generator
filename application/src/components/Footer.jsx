@@ -9,6 +9,6 @@ const Footer = () => {
             <p> Copyright &copy; {currentYear} DC & DG - All Rights Reserved.</p>
         </footer>
     );
-};
+}
 
 export default Footer;
