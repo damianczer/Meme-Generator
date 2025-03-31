@@ -4,9 +4,24 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 50px;
+    min-width: 375px;
+    height: 25px;
     text-align: center;
     color: var(--text-grey-color);
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin 0.3s ease-in-out;
+
+    @media (min-width: 769px) {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+    }
 }

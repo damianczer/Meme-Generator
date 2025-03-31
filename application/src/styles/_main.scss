@@ -1,0 +1,14 @@
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 50px 0 25px 250px;
+    transition: margin 0.3s ease-in-out;
+
+    @media (max-width: 768px) {
+        margin: 50px 0 25px 0;
+    }
+}
