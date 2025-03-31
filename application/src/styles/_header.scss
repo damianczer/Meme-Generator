@@ -1,0 +1,44 @@
+@use 'global' as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-width: 375px;
+    max-width: 100%;
+    height: 50px;
+    text-align: center;
+    color: var(--text-black-color);
+    padding: 5px 0;
+    font-size: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin 0.3s ease-in-out;
+
+    .menu-toggle {
+        position: absolute;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 32px;
+        cursor: pointer;
+        margin-left: 10px;
+        z-index: 1100;
+        display: none;
+    }
+}
+
+.App.menu-open .header {
+    max-width: calc(100% - 250px);
+    margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        .menu-toggle {
+            display: block;
+        }
+    }
+}
