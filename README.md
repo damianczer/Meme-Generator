@@ -13,13 +13,13 @@ Python - https://www.python.org/ <br>
 
  <h1>How do you get the Frontend up and running?</h1>
 
- You need Node.js along with NPM: https://nodejs.org/en
+ You need Node.js along with npm: https://nodejs.org/en
 
  Then, using any terminal, navigate to the application's frontend directory and run the command _“npm install”_ - needed to install the necessary runtime environment packages.
 
  ![image](https://github.com/user-attachments/assets/bd54ee4c-95f3-4cf4-8485-917b8c7e4e5a)
  
-Then use the _“npm start”_ command to start the appication:
+Then use the _“npm start”_ command to start the application:
 
  ![image](https://github.com/user-attachments/assets/04aa6f03-31f2-4155-b2d1-b4f62aa0e014)
 
