@@ -1,0 +1,23 @@
+# Virtual environment
+venv
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# SQLite or local DBs (for development)
+*.sqlite3
+*.db
+
+# OS-specific files
+.DS_Store
+Thumbs.db
