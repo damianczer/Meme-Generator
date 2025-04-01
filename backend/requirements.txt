@@ -1,0 +1,5 @@
+Flask
+gunicorn
+python-dotenv
+flask-sqlalchemy
+uuid
