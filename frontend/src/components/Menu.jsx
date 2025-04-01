@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import '../styles/_menu.scss';
-import userProfile from "../assets/user-profile.png";
 import Cookies from "js-cookie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faImage, faInfoCircle, faScrewdriverWrench, faTimes, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faImage, faInfoCircle, faScrewdriverWrench, faTimes, faSun, faMoon, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
-const Menu = ({ isOpen, onClose, onSelect }) => {
+const Menu = ({ isOpen, onClose, onSelect, selectedOption }) => {
     const cookieName = 'dc_meme_generator_settings';
     const [isDarkMode, setIsDarkMode] = useState(() => Cookies.get(cookieName) === 'dark');
 
@@ -29,19 +28,28 @@ const Menu = ({ isOpen, onClose, onSelect }) => {
                 <FontAwesomeIcon icon={faTimes} />
             </button>
             <div className="menu-profile">
-                <img src={userProfile} alt="User Profile" className="profile-icon" />
+                <FontAwesomeIcon icon={faUserCircle} className="profile-icon" />
                 <p className="username">Anonymous</p>
             </div>
             <ul>
-                <li onClick={() => handleSelect('Generator')}>
+                <li 
+                    className={selectedOption === 'Generator' ? 'active' : ''} 
+                    onClick={() => handleSelect('Generator')}
+                >
                     Generator
                     <FontAwesomeIcon icon={faScrewdriverWrench} className="menu-icon" />
                 </li>
-                <li onClick={() => handleSelect('Gallery')}>
+                <li 
+                    className={selectedOption === 'Gallery' ? 'active' : ''} 
+                    onClick={() => handleSelect('Gallery')}
+                >
                     Gallery
                     <FontAwesomeIcon icon={faImage} className="menu-icon" />
                 </li>
-                <li onClick={() => handleSelect('About')}>
+                <li 
+                    className={selectedOption === 'About' ? 'active' : ''} 
+                    onClick={() => handleSelect('About')}
+                >
                     About
                     <FontAwesomeIcon icon={faInfoCircle} className="menu-icon" />
                 </li>

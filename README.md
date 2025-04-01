@@ -9,6 +9,8 @@ Python - https://www.python.org/ <br>
 PostgreSQL - https://www.postgresql.org/ <br>
 Flask - https://flask.palletsprojects.com/en/stable/ <br>
 
+The frontend is built as an SPA (Single-Page-Application) <br>
+
  Welcome to the Meme Generator! This application allows you to create, view, and share memes effortlessly. <br>
  Developed by DC & DG, this project is designed to bring fun and creativity to your fingertips. <br>
  Explore the generator, browse the gallery, and learn more about the project in this section. <br>

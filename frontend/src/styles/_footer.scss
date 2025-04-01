@@ -7,13 +7,14 @@
     min-width: 375px;
     height: 25px;
     text-align: center;
-    color: var(--text-grey-color);
+    color: var(--text-color);
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     padding: 5px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: margin 0.3s ease-in-out;
+    background-color: var(--footer-background-color);
 
     @media (min-width: 769px) {
         width: calc(100% - 250px);

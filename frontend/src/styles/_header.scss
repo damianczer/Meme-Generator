@@ -8,14 +8,20 @@
     max-width: 100%;
     height: 50px;
     text-align: center;
-    color: var(--text-black-color);
+    color: var(--text-color);
     padding: 5px 0;
-    font-size: 35px;
+    font-size: 14px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: margin 0.3s ease-in-out;
+    background-color: var(--header-background-color);
+
+    svg{
+        font-size: 22px;
+        color: var( --icon-color);
+    }
 
     .menu-toggle {
         position: absolute;
@@ -27,11 +33,7 @@
         margin-left: 10px;
         z-index: 1100;
         display: none;
-    }
-
-    .logo-image{
-        margin-top: 8px;
-        width: 220px;
+        color: var(--text-color);
     }
 }
 
