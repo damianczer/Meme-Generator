@@ -6,6 +6,8 @@ Technology: <br><br>
 React.js  - https://react.dev/ <br> 
 Sass - https://sass-lang.com/documentation/syntax/ <br>
 Python - https://www.python.org/ <br>
+PostgreSQL - https://www.postgresql.org/ <br>
+Flask - https://flask.palletsprojects.com/en/stable/ <br>
 
  Welcome to the Meme Generator! This application allows you to create, view, and share memes effortlessly. <br>
  Developed by DC & DG, this project is designed to bring fun and creativity to your fingertips. <br>
@@ -17,9 +19,17 @@ Python - https://www.python.org/ <br>
 
  Then, using any terminal, navigate to the application's frontend directory and run the command _“npm install”_ - needed to install the necessary runtime environment packages.
 
+ ```
+ npm install
+ ```
+
  ![image](https://github.com/user-attachments/assets/bd54ee4c-95f3-4cf4-8485-917b8c7e4e5a)
  
 Then use the _“npm start”_ command to start the application:
+
+ ```
+ npm start
+ ```
 
  ![image](https://github.com/user-attachments/assets/04aa6f03-31f2-4155-b2d1-b4f62aa0e014)
 
@@ -104,4 +114,8 @@ The whole application is based on Webpack, making the application secure and eff
    ```
 
 ## Usage
-Once the application is running, you can access it at `http://127.0.0.1:5000/`.
+Once the application is running, you can access it at:
+
+Backend - `http://127.0.0.1:5000/`
+
+Frontend - `http://localhost:3000/`
