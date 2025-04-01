@@ -6,6 +6,7 @@ import Main from './components/Main';
 const Footer = lazy(() => import('./components/Footer'));
 const Header = lazy(() => import('./components/Header'));
 const Menu = lazy(() => import('./components/Menu'));
+const About = lazy(() => import('./components/About'));
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ function App() {
       case 'Gallery':
         return <div>Gallery Component</div>;
       case 'About':
-        return <div>About Component</div>;
+        return <About />;
       default:
         return <div>Generator Component</div>;
     }
@@ -30,7 +31,12 @@ function App() {
     <div className={`App ${isMenuOpen ? 'menu-open' : ''}`}>
       <Suspense fallback={<Loader />}>
         <Header onMenuToggle={toggleMenu} />
-        <Menu isOpen={isMenuOpen} onClose={toggleMenu} onSelect={setSelectedOption} />
+        <Menu 
+          isOpen={isMenuOpen} 
+          onClose={toggleMenu} 
+          onSelect={setSelectedOption} 
+          selectedOption={selectedOption} 
+        />
         <Main>{renderContent()}</Main>
         <Footer />
       </Suspense>

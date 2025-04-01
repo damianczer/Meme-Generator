@@ -1,17 +1,25 @@
 :root {
-  --text-white-color: #ffffff;
-  --text-black-color: #000000;
-  --text-grey-color: #8d8d8d;
-  --icons-color: #ffffff;
-  --menu-background-color: rgb(226 189 6 / 81%);
+  --header-background-color: #edf5fc;
+  --footer-background-color: #edf5fc;
+  --main-background-color: #e2e6ee;
+  --menu-background-color: rgb(82 122 234);
+  --text-color: #000000;
   --menu-button-background-color: #0000006b;
-  --menu-button-background-color-hover: #3b3b3ba6;
+  --menu-button-background-hover-color: #3b3b3ba6;
+  --menu-button-active-background-color: #182b65;
+
+  --header-color: #0a5993;
+  --grey-color: #8d8d8d;
+  --white-color: #ffffff;
 }
 
 [data-theme="dark"] {
-  --icons-color: #8d8d8d;
-  --text-grey-color: #8d8d8d;
-  --menu-background-color: rgb(3 3 3 / 88%);
+  --header-background-color: #1d1e21;
+  --footer-background-color: #1d1e21;
+  --main-background-color: #272727;
+  --menu-background-color: #161616;
+  --text-color: #ffffff;
   --menu-button-background-color: #333333a6;
-  --menu-button-background-color-hover: #3b3b3ba6;
+  --menu-button-background-hover-color: #3b3b3ba6;
+  --menu-button-active-background-color: #184965;
 }

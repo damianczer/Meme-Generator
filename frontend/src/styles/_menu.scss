@@ -30,16 +30,20 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      color: var(--text-white-color);
+      color: var(--white-color);
 
       .menu-icon {
         margin-left: 10px;
-        color: var(--icons-color);
+        color: var(--white-color);
       }
     }
 
     li:hover {
-      background-color: var(--menu-button-background-color-hover);
+      background-color: var(--menu-button-background-hover-color);
+    }
+
+    li.active {
+      background-color: var(--menu-button-active-background-color);
     }
   }
 
@@ -51,13 +55,13 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 2px solid var(--icons-color);
+      color: var(--white-color);
     }
 
     .username {
       margin-top: 10px;
       font-size: 20px;
-      color: var(--icons-color);
+      color: var(--white-color);
     }
   }
 
@@ -65,7 +69,7 @@
     background: none;
     border: none;
     font-size: 24px;
-    color: var(--icons-color);
+    color: var(--white-color);
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -94,7 +98,7 @@
 
   .toggle-icon {
     font-size: 20px;
-    color: var(--icons-color);
+    color: var(--white-color);
     margin: 0 10px;
   }
 
@@ -128,7 +132,7 @@
         width: 14px;
         left: 3px;
         bottom: 3px;
-        background-color: var(--text-white-color);
+        background-color: var(--white-color);
         transition: 0.4s;
         border-radius: 50%;
       }
