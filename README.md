@@ -70,30 +70,39 @@ The whole application is based on Webpack, making the application secure and eff
 5. **Create a new database**  
    Open the PostgreSQL command-line tool (`psql`) and run the following commands:
    ```sql
-   CREATE DATABASE meme_generator;
-   CREATE USER meme_user WITH PASSWORD 'password';
-   GRANT ALL PRIVILEGES ON DATABASE meme_generator TO meme_user;
+   CREATE DATABASE <db_name>;
+   CREATE USER <db_user> WITH PASSWORD '<db_pass>';
+   GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <db_user>;
    ```
 
-6. **Create the necessary table**  
-   While still in the PostgreSQL command-line tool (`psql`), connect to the database and create the table:
+6. **Create the necessary tables**  
+   While still in the PostgreSQL command-line tool (`psql`), connect to the database and create the required tables:
+
    ```sql
    \c meme_generator
-   CREATE TABLE images (
-    id SERIAL PRIMARY KEY,
-    file_name TEXT NOT NULL,
-    display_name TEXT NOT NULL,
-    user_id INTEGER,
-    created_at TIMESTAMP DEFAULT NOW()
-    );
 
+   CREATE TABLE images (
+       id SERIAL PRIMARY KEY,
+       file_name TEXT NOT NULL,
+       display_name TEXT NOT NULL,
+       user_id INTEGER,
+       created_at TIMESTAMP DEFAULT NOW()
+   );
+
+   CREATE TABLE templates (
+       id SERIAL PRIMARY KEY,
+       file_name TEXT NOT NULL,
+       display_name TEXT NOT NULL,
+       user_id INTEGER,
+       created_at TIMESTAMP DEFAULT NOW()
+   );
    ```
 
 7. **Grant privileges to the user**  
    While still connected to the database, grant all privileges on tables and sequences in the `public` schema to the user:
    ```sql
-   GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO meme_user;
-   GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO meme_user;
+   GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO <db_user>;
+   GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO <db_user>;
    ```
 
 9. **Update the Flask configuration**  
@@ -104,7 +113,8 @@ The whole application is based on Webpack, making the application secure and eff
    ```
 
    Additionally, you can update other variables in the `.env` file to customize the application behavior:
-   - **`UPLOAD_FOLDER`**: Path to the folder where uploaded files will be stored (e.g., `uploads`).
+   - **`IMAGES_FOLDER`**: Path to the folder where uploaded images will be stored (e.g., `uploads/images`).
+   - **`TEMPLATES_FOLDER`**: Path to the folder where uploaded templates will be stored (e.g., `uploads/templates`).
    - **`ALLOWED_EXTENSIONS`**: Comma-separated list of allowed file extensions (e.g., `png,jpg,jpeg`).
    - **`ALLOWED_MIME_TYPES`**: Comma-separated list of allowed MIME types (e.g., `image/png,image/jpeg`).
    - **`MAX_CONTENT_LENGTH`**: Maximum allowed file size in bytes (e.g., `10485760` for 10 MB).
