@@ -3,3 +3,4 @@ gunicorn
 python-dotenv
 flask-sqlalchemy
 uuid
+psycopg2
