@@ -13,7 +13,7 @@ app.config['IMAGES_FOLDER'] = os.path.join(
     os.path.dirname(__file__), '..', os.getenv('IMAGES_FOLDER')
 )
 app.config['TEMPLATES_FOLDER'] = os.path.join(
-    os.path.dirname(__file__), '..', os.getenv('IMAGES_FOLDER')
+    os.path.dirname(__file__), '..', os.getenv('TEMPLATES_FOLDER')
 )
 app.config['ALLOWED_EXTENSIONS'] = set(os.getenv('ALLOWED_EXTENSIONS').split(','))
 app.config['ALLOWED_MIME_TYPES'] = set(os.getenv('ALLOWED_MIME_TYPES').split(','))
