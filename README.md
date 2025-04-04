@@ -1,5 +1,7 @@
 # Meme-Generator
 
+  ![GitHub stars](https://img.shields.io/github/stars/damianczer/meme-generator?style=social)
+
 **Authors:** Damian Czerwiński & Dominik Grabowski
 
 Technology: <br><br>
