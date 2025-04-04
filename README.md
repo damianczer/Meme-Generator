@@ -81,7 +81,7 @@ The whole application is based on Webpack, making the application secure and eff
    ```sql
    \c meme_generator
 
-   CREATE TABLE images (
+   CREATE TABLE memes (
        id SERIAL PRIMARY KEY,
        file_name TEXT NOT NULL,
        display_name TEXT NOT NULL,
