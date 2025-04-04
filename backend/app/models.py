@@ -1,9 +1,8 @@
 from app import db
 from datetime import datetime
 
-
-class Image(db.Model):
-    __tablename__ = 'images'
+class Meme(db.Model):
+    __tablename__ = 'memes'
 
     id = db.Column(db.Integer, primary_key=True)  # SERIAL PRIMARY KEY
     file_name = db.Column(db.String, nullable=False)  # TEXT NOT NULL
