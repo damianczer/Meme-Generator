@@ -2,7 +2,7 @@ import os
 from flask import Blueprint, jsonify, request, send_from_directory, current_app
 from werkzeug.utils import secure_filename
 from app import db
-from app.models import Image, Template
+from app.models import Meme, Template
 import uuid
 
 main = Blueprint('main', __name__)
@@ -10,9 +10,9 @@ main = Blueprint('main', __name__)
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in current_app.config['ALLOWED_EXTENSIONS']
 
-@main.route('/uploads/images/<filename>', methods=['GET'])
-def get_image_file(filename):
-    return send_from_directory(current_app.config['IMAGES_FOLDER'], filename)
+@main.route('/uploads/memes/<filename>', methods=['GET'])
+def get_meme_file(filename):
+    return send_from_directory(current_app.config['MEMES_FOLDER'], filename)
 
 @main.route('/uploads/templates/<filename>', methods=['GET'])
 def get_template_file(filename):
@@ -28,10 +28,10 @@ def api():
 
 @main.route('/api/memes', methods=['GET'])
 def get_memes():
-    images = Image.query.all()
-    if not images:
+    memes = Meme.query.all()
+    if not memes:
         return jsonify(message="No memes found."), 404
-    return jsonify([image.to_dict() for image in images])
+    return jsonify([meme.to_dict() for meme in memes])
 
 @main.route('/api/memes', methods=['POST'])
 def upload_meme():
@@ -69,11 +69,11 @@ def upload_meme():
         return jsonify(message="File extension is not allowed"), 400
 
     unique_filename = f"{uuid.uuid4().hex}.{file_ext}"
-    filepath = os.path.join(current_app.config['IMAGES_FOLDER'], unique_filename)
+    filepath = os.path.join(current_app.config['MEMES_FOLDER'], unique_filename)
     file.save(filepath)
 
-    image = Image(file_name=unique_filename, display_name=display_name, user_id=user_id)
-    db.session.add(image)
+    meme = Meme(file_name=unique_filename, display_name=display_name, user_id=user_id)
+    db.session.add(meme)
     db.session.commit()
 
     return jsonify(

@@ -81,7 +81,7 @@ The whole application is based on Webpack, making the application secure and eff
    ```sql
    \c meme_generator
 
-   CREATE TABLE images (
+   CREATE TABLE memes (
        id SERIAL PRIMARY KEY,
        file_name TEXT NOT NULL,
        display_name TEXT NOT NULL,
@@ -113,7 +113,7 @@ The whole application is based on Webpack, making the application secure and eff
    ```
 
    Additionally, you can update other variables in the `.env` file to customize the application behavior:
-   - **`IMAGES_FOLDER`**: Path to the folder where uploaded images will be stored (e.g., `uploads/images`).
+   - **`MEMES_FOLDER`**: Path to the folder where uploaded memes will be stored (e.g., `uploads/memes`).
    - **`TEMPLATES_FOLDER`**: Path to the folder where uploaded templates will be stored (e.g., `uploads/templates`).
    - **`ALLOWED_EXTENSIONS`**: Comma-separated list of allowed file extensions (e.g., `png,jpg,jpeg`).
    - **`ALLOWED_MIME_TYPES`**: Comma-separated list of allowed MIME types (e.g., `image/png,image/jpeg`).
