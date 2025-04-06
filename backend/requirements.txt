@@ -1,4 +1,5 @@
-Flask
+flask
+flask-cors
 gunicorn
 python-dotenv
 flask-sqlalchemy
