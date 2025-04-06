@@ -1,6 +1,8 @@
-Flask
+flask
+flask-cors
 gunicorn
 python-dotenv
 flask-sqlalchemy
 uuid
 psycopg2
+flask_cors

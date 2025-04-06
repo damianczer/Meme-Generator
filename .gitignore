@@ -3,6 +3,7 @@ uploads
 
 # Frontend
 frontend/node_modules
+frontend/build
 /.pnp
 .pnp.js
 /coverage
