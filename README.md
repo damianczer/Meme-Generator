@@ -4,7 +4,7 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/damianczer/meme-generator?style=social) <br>
 ![GitHub issues](https://img.shields.io/github/issues/damianczer/meme-generator?style=flat-square) <br>
 
-**Authors:** [Damian Czerwiński](https://github.com/damianczer/) & [Dominik Grabowski](https://github.com/grabovv)
+**Authors:** [Damian Czerwiński](https://github.com/damianczer/) & [Dominik Grabowski](https://github.com/grabovv) 
 
 Technology: <br><br>
 React.js  - https://react.dev/ <br> 
